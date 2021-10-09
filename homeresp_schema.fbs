@@ -1,0 +1,88 @@
+namespace com.xgimi.flattest.homeresp;
+
+table HomeResp {
+    code : int;
+    msg : string;
+    data : HomeData;
+}
+
+table HomeData {
+    version_code : int;
+    updatetime : long;
+    pages : [Page];
+    delay_update_time : long;
+}
+
+table Page {
+    pageid : int;
+    tagid : int;
+    pagename : string;
+    tabindicator : string;
+    background : string;
+    op_type : int;
+    op_url : string;
+    cannothide : bool;
+    cornermark : string;
+    corner_w : int;
+    corner_h : int;
+    hasMore : int;
+    lastIndex : int;
+    pagedata : [PageData];
+}
+
+table PageData {
+    metroheight : int;
+    metrorownum : int;
+    columntitle : string;
+    ui_type : string;
+    weight : int;
+    poster_time : int;
+    hide_enable : int;
+    support_mini_version : int;
+    spancount : int;
+    row_spacing : int;
+    col_spacing : int;
+    background : string;
+    timeline_enable : int;
+    log : string;
+    recom_key : string;
+    vip_adapt : int;
+    items : [Item];
+}
+
+table Item {
+    subject_id : string;
+    item_id : long;
+    updatetime : long;
+    item_type : string;
+    item_tag : string;
+    item_style : string;
+    item_color : string;
+    title : string;
+    img : string;
+    w : int;
+    h : int;
+    source_from : string;
+    source_color : string;
+    line_title : string;
+    title_position : int;
+    news_info_default : string;
+    op_type : int;
+    op_url : string;
+    radius : int;
+    op_apktip : string;
+    layer_location : int;
+    layer_h : int;
+    layer_img : string;
+    op_apkpackage : string;
+    op_apkurl : string;
+    op_apkname : string;
+    is_show_shadow : int;
+    is_circle_frame : int;
+    activity_end_time : int;
+    tips : string;
+    tipcolor : string;
+    log : string;
+}
+
+root_type HomeResp;
