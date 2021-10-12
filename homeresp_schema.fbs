@@ -25,8 +25,8 @@ table Page {
     cornermark : string;
     corner_w : int;
     corner_h : int;
-    hasMore : int;
-    lastIndex : int;
+    has_more : int;
+    last_index : int;
     pagedata : [PageData];
 }
 
